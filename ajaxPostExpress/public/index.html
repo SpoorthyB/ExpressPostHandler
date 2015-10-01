@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration page</title>
+    <link rel="stylesheet" type="text/css" href="assets/stylesheet/style.css">
+    <script type="text/javascript" src="assets/js/script1.js"></script>
+</head>
+
+<body>
+    
+    <h1>Registration</h1>
+    <hr class="hr-line"></hr>
+    <br>
+    <div class="fix-container">
+        <!--action='/' method="post"-->
+        <form name="tempForm" id="formP" action='/' method="post" onsubmit="submitForm(this); return false;">
+            <div class="row">
+                <div class="label">
+                    <label for="userid">User ID</label>
+                </div>
+                <div class="field short">
+                    <input class="entry-box" type="text" name="userid" id="userid" autofocus required/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label for="password">Password</label>
+                </div>
+                <div class="field short">
+                    <input class="entry-box" type="password" name="password" id="password" maxlength="20" required onkeyup="show()" />
+                </div>
+                <div class="meterbar" id="meter" style="background-color:green;width:1px;height:10px;"></div>
+                <!-- <span id="meter"></span> -->
+                <div class="msg" id="strength"></div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label for="password_confm">Verify Password</label>
+                </div>
+                <div class="field short">
+                    <input class="entry-box" type="password" name="cpassword" id="password_confm" maxlength="20" required onblur="verify()" />
+                </div>
+                <span id="descone"></span>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label for="email">Email Address</label>
+                </div>
+                <div class="field short">
+                    <input class="entry-box" type="email" name="email" id="email" placeholder="name@domain.com" required/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label for="email_confm">Verify Email Address</label>
+                </div>
+                <div class="field short">
+                    <input class="entry-box" name="email_confm" type="email" id="email_confm" required/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label for="sec_question1">Security Question</label>
+                </div>
+                <div class="field short">
+                    <select name="q1" id="sec_question1" required>
+                        <option value="1" selected>Sum of 2+3 =</option>
+                        <option value="2">Sum of 100 + 200 =</option>
+                        <option value="3">23 x 100 = </option>
+                        <option value="4">Capital of India</option>
+                        <option value="5">Capital of USA</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label for="sec_answer1">Security Answer</label>
+                </div>
+                <div class="field short">
+                    <input class="entry-box" type="text" name="a1" id="sec_answer1" required/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label for="sec_question2">Security Question</label>
+                </div>
+                <div class="field short">
+                    <select name="q2" id="sec_question2">
+                        <option value="4" selected>Capital of India </option>
+                        <option value="1">Sum of 2+3 =</option>
+                        <option value="2">Sum of 100 + 200 =</option>
+                        <option value="3">23 x 100 = </option>
+                        <option value="5">Capital of USA</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label for="sec_answer2">Security Answer</label>
+                </div>
+                <div class="field short">
+                    <input class="entry-box" type="text" name="a2" id="secanswer2" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label for="telephone">Mobile</label>
+                </div>
+                <div class="field short">
+                    <input class="entry-box" type="tel" name="tel" id="telephone" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label>Address</label>
+                </div>
+                <div class="field short">
+                    <div class="field long">
+                        <textarea class="entry-box" rows="2" columns="100" name="address" id="address">
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label>Areas you might be interested in, select one or more</label>
+                </div>
+                <div class="field short">
+                    <div class="field long">
+                        <textarea class="entry-box" rows="4" columns="20" name="areas" id="areas">
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" name="submit" value="Register"/>
+            <input type="reset" value="Cancel" />
+            <b align="center" id="succ_msg"></b>
+        </form>
+    </div>
+</body>
+
+</html>
